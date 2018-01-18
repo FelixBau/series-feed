@@ -1,0 +1,13 @@
+body {
+    /* background-image: url("../images/popcorn1.jpg"); */
+    background-color: white;
+    background-attachment: fixed;
+}
+
+.navbar-custom {
+    background-color: #7a1600;
+}
+
+.btn-custom {
+    background-color: #7a1600;
+}
