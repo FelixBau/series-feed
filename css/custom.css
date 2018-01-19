@@ -11,3 +11,13 @@ body {
 .btn-custom {
     background-color: #7a1600;
 }
+
+.navbar .dropdown-menu li > a:hover, .navbar .dropdown-menu li > a:focus, .navbar.navbar-default .dropdown-menu li > a:hover, .navbar.navbar-default .dropdown-menu li > a:focus {
+    color: #FFFFFF;
+    background-color: #7a1600;
+}
+
+.navbar .dropdown-menu .active > a, .navbar.navbar-default .dropdown-menu .active > a {
+    background-color: #7a1600;
+    color: #ffffff;
+}
