@@ -10,6 +10,10 @@
             } else {
                 $p = 'index';
             }
+
+            if(($p != 'index') && ($p != 'login') && ($p != 'register') && (!isset($_SESSION['user']))) {
+                header("Location: ?p=index");
+            }
         ?>
         <?php require_once('./api.php'); ?>
         <?php include('./pages/header.php'); ?>
