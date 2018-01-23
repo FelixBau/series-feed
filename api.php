@@ -103,6 +103,23 @@
         return get_mysql()->query("INSERT INTO users (username, password, email, account_status, group_id) VALUES ('$username', '$password', '$mail_address', '2', '1')");
     }
 
+    // Account status
+    function get_account_status($status_id)
+    {
+        switch($status_id)
+        {
+            case 0:
+                return "<span class='text-danger'><strong>Account gesperrt</strong></span>";
+                break;
+            case 1:
+                return "<span class='text-success'><strong>Account aktiv</strong></span>";
+                break;
+            case 2:
+                return "<span class='text-warning'><strong>Account nicht best&auml;tigt</strong></span>";
+                break;
+        }
+    }
+
     // Date (format)
     function get_date($millis) {
         if($millis == 0) {

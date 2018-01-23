@@ -30,8 +30,8 @@
                             <?php
                         }
                         ?>
-                            <li><a href="compare.php"><i class="material-icons">compare_arrows</i>&nbsp;Serien vergleichen</a></li>
-                            <li><a href="#" data-toggle="modal" data-target="#searchModal"><i class="material-icons">search</i></a></li>
+                            <li><a href="?p=compare"><i class="material-icons">compare_arrows</i>&nbsp;Serien vergleichen</a></li>
+                            <li><a href="?p=search"><i class="material-icons">search</i></a></li>
                         <?php
                     }
                 ?>
