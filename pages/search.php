@@ -39,21 +39,19 @@
             }
     } else {
         ?>
-            <form action="?p=search" method="POST">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="loginModalLabel">Suchen</h4>
+            <h3>Suchen</h3>
+            <hr>
+            <div class="card">
+                <div class="card-body">
+                    <form action="?p=search" method="POST">
+                        <div class="form-group label-floating has-info">
+                            <label class="control-label">Suche</label>
+                            <input name="q" type="text" class="form-control" />
+                        </div>
+                        <input type="submit" class="btn btn-success btn-block" value="Suchen">
+                    </form>
                 </div>
-                <div class="modal-body">
-                    <div class="form-group label-floating has-info">
-                        <label class="control-label">Suche</label>
-                        <input name="q" type="text" class="form-control" />
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <input type="submit" class="btn btn-success" value="Suchen">
-                </div>
-            </form>
+            </div>
         <?php
     }
 ?>

@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
-<link rel="stylesheet" href="http://demos.creative-tim.com/material-kit/assets/css/material-kit.css" />
+<link rel="stylesheet" href="./css/material-kit.css" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 <link rel="stylesheet" href="./css/custom.css" />
 <!-- Favicon -->

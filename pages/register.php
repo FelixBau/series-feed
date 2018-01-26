@@ -5,8 +5,6 @@
         $password = $_POST['password'];
         $password_repeat = $_POST['password_repeat'];
 
-        echo $username;
-
         if($password != $password_repeat) {
             echo("<div class='alert alert-danger' role='alert'>Die Passwört stimmen nicht überein!</div>");
         } else {

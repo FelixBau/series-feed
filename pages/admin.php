@@ -4,7 +4,7 @@
     }
 ?>
 <h1>Administration</h1>
-<hr></hr>
+<hr>
 <div class="card card-nav-tabs">
     <div class="header header-success">
         <div class="nav-tabs-navigation">
