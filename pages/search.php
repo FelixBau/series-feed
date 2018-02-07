@@ -39,16 +39,14 @@
             }
     } else {
         ?>
-            <h3>Suchen</h3>
-            <hr>
-            <div class="card">
+            <div class="card" style="margin-top: 250px;">
                 <div class="card-body">
                     <form action="?p=search" method="POST">
-                        <div class="form-group label-floating has-info">
+                        <div class="form-group label-floating has-success">
                             <label class="control-label">Suche</label>
                             <input name="q" type="text" class="form-control" />
                         </div>
-                        <input type="submit" class="btn btn-success btn-block" value="Suchen">
+                        <input type="submit" class="btn btn-custom btn-block" value="Suchen">
                     </form>
                 </div>
             </div>

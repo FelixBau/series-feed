@@ -4,15 +4,21 @@
     }
     $id = $_GET['id'];
     $series =  get_series('id', $id);
+    click_series('id', $id);
 ?>
 <div class="jumbotron">
     <h1><b><?php echo $series['name']; ?></b></h1>
+    <i class="material-icons">mouse</i>&nbsp;<?php echo $series['clicks']; ?><br>
+    <i class="material-icons">star</i>&nbsp;<?php echo get_ratings($id); ?>
 </div>
 <div class="card">
     <div class="content">
         <b>Produktionsunternehmen</b>
         <hr>
-        <?php echo get_producer('id', $series['producerid'])['name']; ?>
+        <?php 
+            $producer = get_producer('id', $series['producerid']);
+            echo $producer['name'];
+        ?>
     </div>
 </div>
 <br><br>

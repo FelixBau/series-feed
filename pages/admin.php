@@ -59,8 +59,7 @@
                                     <td><?php echo $group['name']; ?></td>
                                     <td><?php echo get_date($user['last_login']); ?></td>
                                     <td class="td-actions">
-                                        <a type="button" rel="tooltip" title="Edit Profile" class="btn btn-success btn-simple btn-xs" href="edit_profile.php?userid=<?php echo $user['id']; ?>"><i class="fa fa-edit"></i></a>
-                                        <a type="button" rel="tooltip" title="Delete Profile" class="btn btn-danger btn-simple btn-xs" href="delete_profile.php?userid=<?php echo $user['id']; ?>"><i class="fa fa-times"></i></a>
+                                        <a type="button" rel="tooltip" title="Delete Profile" class="btn btn-danger btn-simple btn-xs" href="?p=delete_profile&?id=<?php echo $user['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php
@@ -91,8 +90,7 @@
                                     <td><strong><?php echo $group['name']; ?></strong></td>
                                     <td><?php echo $group['perm_level']; ?></td>
                                     <td class="td-actions">
-                                        <a type="button" rel="tooltip" title="Edit Group" class="btn btn-success btn-simple btn-xs" href="edit_group.php?groupid=<?php echo $group['id']; ?>"><i class="fa fa-edit"></i></a>
-                                        <a type="button" rel="tooltip" title="Delete Group" class="btn btn-danger btn-simple btn-xs" href="delete_group.php?groupid=<?php echo $group['id']; ?>"><i class="fa fa-times"></i></a>
+                                        <a type="button" rel="tooltip" title="Delete Group" class="btn btn-danger btn-simple btn-xs" href="?p=delete_group&id=<?php echo $group['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php
@@ -109,7 +107,7 @@
 <div class="modal fade" id="addGroupModal" tabindex="-1" role="dialog" aria-labelledby="addGroupModal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form action="add_group.php" method="POST">
+            <form action="?p=add_group" method="POST">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     <h4 class="modal-title" id="addGroupModal">Gruppe hinzuf&uuml;gen</h4>

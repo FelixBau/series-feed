@@ -55,8 +55,7 @@
                                     <td><?php echo $producer['id']; ?></td>
                                     <td><strong><?php echo $producer['name']; ?></strong></td>
                                     <td class="td-actions">
-                                        <a type="button" rel="tooltip" title="Edit Producer" class="btn btn-success btn-simple btn-xs" href="edit_producer.php?producerid=<?php echo $producer['id']; ?>"><i class="fa fa-edit"></i></a>
-                                        <a type="button" rel="tooltip" title="Delete Producer" class="btn btn-danger btn-simple btn-xs" href="delete_producer.php?producerid=<?php echo $producer['id']; ?>"><i class="fa fa-times"></i></a>
+                                        <a type="button" rel="tooltip" title="Delete Producer" class="btn btn-danger btn-simple btn-xs" href="?p=delete_producer&id=<?php echo $producer['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php
@@ -96,8 +95,8 @@
                                     <td><?php echo $series['genre']; ?></td>
                                     <td><?php echo $series['last_edit']; ?></td>
                                     <td class="td-actions">
-                                        <a type="button" rel="tooltip" title="Edit Series" class="btn btn-success btn-simple btn-xs" href="edit_series.php?seriesid=<?php echo $series['id']; ?>"><i class="fa fa-edit"></i></a>
-                                        <a type="button" rel="tooltip" title="Delete Series" class="btn btn-danger btn-simple btn-xs" href="delete_series.php?seriesid=<?php echo $series['id']; ?>"><i class="fa fa-times"></i></a>
+                                        <a type="button" rel="tooltip" title="Edit Series" class="btn btn-success btn-simple btn-xs" href="?p=edit_series&id=<?php echo $series['id']; ?>"><i class="fa fa-edit"></i></a>
+                                        <a type="button" rel="tooltip" title="Delete Series" class="btn btn-danger btn-simple btn-xs" href="?p=delete_series&id=<?php echo $series['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php
@@ -126,12 +125,11 @@
                                 ?>
                                 <tr>
                                     <td><?php echo $service['id']; ?></td>
-                                    <td><strong><a href="service.php?id=<?php echo $service['id']; ?>"><?php echo $service['name']; ?></a></strong></td>
+                                    <td><strong><a href="?p=service&id=<?php echo $service['id']; ?>"><?php echo $service['name']; ?></a></strong></td>
                                     <td><a href="<?php echo $service['website_link']; ?>"><?php echo $service['website_link']; ?></a></td>
                                     <td><?php echo $service['price_string']; ?></td>
                                     <td class="td-actions">
-                                        <a type="button" rel="tooltip" title="Edit Service" class="btn btn-success btn-simple btn-xs" href="edit_service.php?serviceid=<?php echo $service['id']; ?>"><i class="fa fa-edit"></i></a>
-                                        <a type="button" rel="tooltip" title="Delete Service" class="btn btn-danger btn-simple btn-xs" href="delete_service.php?serviceid=<?php echo $service['id']; ?>"><i class="fa fa-times"></i></a>
+                                        <a type="button" rel="tooltip" title="Delete Service" class="btn btn-danger btn-simple btn-xs" href="?p=delete_service&id=<?php echo $service['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php

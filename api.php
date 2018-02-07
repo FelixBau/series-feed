@@ -19,6 +19,10 @@
         get_mysql()->query("UPDATE users SET last_login='$millis' WHERE $key='$value'");
     }
 
+    function delete_profile($key, $value) {
+        get_mysql()->query("delete from users where $key='$value'");
+    }
+
     // Gruppen
     function get_group($key, $value) {
         return get_mysql()->query("select * from groups where $key='$value'")->fetch_assoc();
@@ -30,6 +34,10 @@
 
     function add_group($name, $perm_level) {
         return get_mysql()->query("insert into groups (name, perm_level) values ('$name', '$perm_level')") != null;
+    }
+
+    function delete_group($key, $value) {
+        get_mysql()->query("delete from groups where $key='$value'");
     }
 
     // Streamingdienste
@@ -52,6 +60,19 @@
 
     function get_series($key, $value) {
         return get_mysql()->query("select * from series_data where $key='$value'")->fetch_assoc();
+    }
+
+    function delete_series($key, $value) {
+        get_mysql()->query("delete from series_data where $key='$value'");
+    }
+
+    function most_clicks() {
+        return get_mysql()->query("select * from series_data order by clicks desc")->fetch_assoc();
+    }
+
+    function get_ratings($series_id) {
+        $result = get_mysql()->query("select count(*) from ratings where seriesid='$series_id'")->fetch_assoc();
+        return $result['count(*)'];
     }
 
     // Produktionsfirmen
