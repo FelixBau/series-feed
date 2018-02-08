@@ -67,7 +67,11 @@
     }
 
     function most_clicks() {
-        return get_mysql()->query("select * from series_data order by clicks desc")->fetch_assoc();
+        return get_mysql()->query("select * from series_data order by clicks desc limit 1")->fetch_assoc();
+    }
+
+    function most_ratings() {
+        return get_mysql()->query("SELECT seriesid, avg(stars) AS seriesAvg FROM ratings GROUP BY seriesid")->fetch_assoc();
     }
 
     function get_ratings($series_id) {

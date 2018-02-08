@@ -7,8 +7,9 @@
         header("Location: ?p=index");
     }
 ?>
-<h1>Benutzerprofil</h1>
-<hr>
+<div class="jumbotron">
+    <h1><strong>Benutzerprofil</strong></h1>
+</div>
 <div class="card">
     <div class="card-body">
         <label class="label label-success">Benutzername</label>&nbsp;

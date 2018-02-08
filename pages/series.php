@@ -53,3 +53,11 @@
         <?php echo $series['last_edit']; ?>
     </div>
 </div>
+<br><br>
+<div class="card">
+    <div class="content">
+        <form action="?p=rating" mmethod="POST">
+            
+        </form>
+    </div>
+</div>

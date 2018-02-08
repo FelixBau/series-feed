@@ -3,11 +3,11 @@
         header("Location: ?p=index");
     }
 ?>
-    <h1>Serienverwaltung</h1>
-    <hr></hr>
+    <div class="jumbotron">
+        <h1><strong>Serienverwaltung</strong></h1>
+    </div>
     <div class="card card-nav-tabs">
     <div class="header header-success">
-        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
         <div class="nav-tabs-navigation">
             <div class="nav-tabs-wrapper">
                 <ul class="nav nav-tabs" data-tabs="tabs">

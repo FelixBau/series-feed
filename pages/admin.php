@@ -3,8 +3,9 @@
         header("Location: ?p=index");
     }
 ?>
-<h1>Administration</h1>
-<hr>
+<div class="jumbotron">
+    <h1><strong>Administration</strong></h1>
+</div>
 <div class="card card-nav-tabs">
     <div class="header header-success">
         <div class="nav-tabs-navigation">
