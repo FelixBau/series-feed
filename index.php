@@ -18,6 +18,7 @@
         <?php require_once('./api.php'); ?>
         <?php include('./pages/header.php'); ?>
 
+        <!--
         <div class="col-md-2">
             <div class="card">
                 <div class="content">
@@ -27,6 +28,7 @@
                 </div>
             </div>
         </div>
+        -->
         
         <div class="container">
             <?php include('./pages/' . $p . '.php'); ?>

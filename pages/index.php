@@ -20,7 +20,7 @@
                 <center>
                     <strong>
                         <label class="label label-success">TOP 1 - Meiste Bewertungen</label>
-                        <label class="label label-warning"><?php echo 'Durchschnittlich ' . +$most_ratings['seriesAvg'] . ' Sterne' ?></label>
+                        <label class="label label-warning"><?php echo 'Durchschnittlich ' . + $most_ratings['seriesAvg'] . ' Sterne' ?></label>
                     </strong>
                 </center>
                 <hr>

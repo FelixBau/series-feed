@@ -70,15 +70,6 @@
         return get_mysql()->query("select * from series_data order by clicks desc limit 1")->fetch_assoc();
     }
 
-    function most_ratings() {
-        return get_mysql()->query("SELECT seriesid, avg(stars) AS seriesAvg FROM ratings GROUP BY seriesid")->fetch_assoc();
-    }
-
-    function get_ratings($series_id) {
-        $result = get_mysql()->query("select count(*) from ratings where seriesid='$series_id'")->fetch_assoc();
-        return $result['count(*)'];
-    }
-
     // Produktionsfirmen
     function get_producers() {
         return get_mysql()->query("select * from producers");
@@ -86,6 +77,25 @@
 
     function get_producer($key, $value) {
         return get_mysql()->query("select * from producers where $key='$value'")->fetch_assoc();
+    }
+
+    // Ratings
+    function get_ratings($key, $value) {
+        return get_mysql()->query("select * from ratings where $key='$value'");
+    }
+
+    function add_rating($seriesid, $userid, $stars, $text) {
+        $milliseconds = round(microtime(true) * 1000);
+        get_mysql()->query("insert into ratings (seriesid, userid, stars, text, rating_date) values ('$seriesid', '$userid', '$stars', '$text', '$milliseconds')");
+    }
+
+    function most_ratings() {
+        return get_mysql()->query("SELECT seriesid, avg(stars) AS seriesAvg FROM ratings GROUP BY seriesid")->fetch_assoc();
+    }
+
+    function count_ratings($series_id) {
+        $result = get_mysql()->query("select count(*) from ratings where seriesid='$series_id'")->fetch_assoc();
+        return $result['count(*)'];
     }
 
     // Search
