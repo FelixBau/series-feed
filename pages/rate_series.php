@@ -10,5 +10,7 @@
 
     add_rating($seriesid, $userid, $stars, $text);
     
+    $_SESSION['notification'] = "<div class='alert alert-success'><span class='glyphicon glyphicon-ok'></span>&nbsp;<strong>Bewertung abgegeben!</strong></div>";
+
     header("Location: ?p=series&id=" . $seriesid);
 ?>
