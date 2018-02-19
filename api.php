@@ -98,6 +98,11 @@
         return $result['count(*)'];
     }
 
+    function has_rated($seriesid, $userid) {
+        $result = get_mysql()->query("select userid from ratings where userid='$userid' and seriesid='$seriesid'")->fetch_assoc();
+        return $result['userid'] != null;
+    }
+
     // Search
     function search_database($text) {
         $sql = "select * from series_data where name like '%$text%' or genre like '%$text%'";

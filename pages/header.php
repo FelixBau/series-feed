@@ -30,7 +30,6 @@
                             <?php
                         }
                         ?>
-                            <li><a href="?p=compare"><i class="material-icons">compare_arrows</i>&nbsp;Serien vergleichen</a></li>
                             <li><a href="?p=search"><i class="material-icons">search</i></a></li>
                         <?php
                     }

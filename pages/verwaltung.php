@@ -96,7 +96,6 @@
                                     <td><?php echo $series['last_edit']; ?></td>
                                     <td class="td-actions">
                                         <a type="button" rel="tooltip" title="Edit Series" class="btn btn-success btn-simple btn-xs" href="?p=edit_series&id=<?php echo $series['id']; ?>"><i class="fa fa-edit"></i></a>
-                                        <a type="button" rel="tooltip" title="Delete Series" class="btn btn-danger btn-simple btn-xs" href="?p=delete_series&id=<?php echo $series['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php

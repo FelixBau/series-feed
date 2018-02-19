@@ -9,5 +9,6 @@
     $text = $_POST['text'];
 
     add_rating($seriesid, $userid, $stars, $text);
+    
     header("Location: ?p=series&id=" . $seriesid);
 ?>

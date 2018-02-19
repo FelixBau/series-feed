@@ -45,15 +45,6 @@
         <?php echo $series['genre']; ?>
     </div>
 </div>
-<!--
-<br><br>
-<div class="card">
-    <div class="content">
-        <b>Letzte Bearbeitung</b>
-        <hr>
-        <?php echo $series['last_edit']; ?>
-    </div>
-</div> -->
 <br><br>
 <div class="card">
     <div class="content">
@@ -63,12 +54,13 @@
             if(count_ratings($id) != 0) {
                 $ratings = get_ratings('seriesid', $id);
                 while($r = $ratings->fetch_assoc()) {
+                    $rating_user = get_user('id', $r['userid']);
                     ?>
                         <div class="card">
                             <div class="content">
                                 <label class="label label-warning"><?php echo $r['stars'] . ' Sterne'; ?></label>
                                 <label class="label label-info"><?php echo get_date($r['rating_date']); ?></label>
-                                <label class="label label-success"><?php echo get_user('id', $r['userid'])['username']; ?></label>
+                                <label class="label label-success"><?php echo $rating_user['username']; ?></label>
                                 <hr>
                                 <?php echo $r['text']; ?>
                             </div>
@@ -80,7 +72,7 @@
                 echo 'Keine Bewertungen vorhanden';
             }
 
-            if(isset($_SESSION['user'])) {
+            if(isset($_SESSION['user']) && !has_rated($id, $user['id'])) {
                 ?>
     	            <div class="card">
                         <div class="content">

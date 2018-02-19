@@ -17,21 +17,15 @@
         ?>
         <?php require_once('./api.php'); ?>
         <?php include('./pages/header.php'); ?>
-
-        <!--
-        <div class="col-md-2">
-            <div class="card">
-                <div class="content">
-                    <center>
-                        <a href="https://series-feed.minewave.de" title="Besucherzaehler"><img src="//c.andyhoppe.com/1517997215" style="border:none" alt="Besucherzaehler" /></a>
-                    </center>
-                </div>
-            </div>
-        </div>
-        -->
-        
         <div class="container">
-            <?php include('./pages/' . $p . '.php'); ?>
+            <?php
+                $page = './pages/' . $p . '.php';
+                $page_exists = file_exists($page);
+                if(!$page_exists) {
+                    $page = './pages/not_found.php';
+                }
+                include($page); 
+            ?>
         </div>
     </body>
 </html>
