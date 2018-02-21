@@ -104,6 +104,11 @@
         return get_mysql()->query("SELECT * FROM series_data ORDER BY clicks DESC LIMIT 1")->fetch_assoc();
     }
 
+    // Methode um eine Serie in die Datenbank einzufügen
+    function add_series($name, $producerid, $seasons, $episodes, $genre) {
+        get_mysql()->query("INSERT INTO series_data (name, producerid, seasons, episodes, genre) VALUES ('$name', '$producerid', '$seasons', '$episodes', '$genre')");
+    }
+
     /*  
         Produktionsfirmen
     */
@@ -195,7 +200,7 @@
 
     // Register-Funktion zum registrieren eines neuen Benutzers
     function register($username, $mail_address, $password) {
-        return get_mysql()->query("INSERT INTO users (username, password, email, account_status, group_id) VALUES ('$username', '$password', '$mail_address', '2', '1')");
+        return get_mysql()->query("INSERT INTO users (username, password, email, account_status, group_id) VALUES ('$username', '$password', '$mail_address', '1', '1')");
     }
 
     // Formatierung eines gegebenen Account-Status

@@ -60,7 +60,7 @@
                                     <td><?php echo $group['name']; ?></td>
                                     <td><?php echo get_date($user['last_login']); ?></td>
                                     <td class="td-actions">
-                                        <a type="button" rel="tooltip" title="Delete Profile" class="btn btn-danger btn-simple btn-xs" href="?p=delete_profile&?id=<?php echo $user['id']; ?>"><i class="fa fa-times"></i></a>
+                                        <a type="button" rel="tooltip" title="Delete Profile" class="btn btn-danger btn-simple btn-xs" href="?p=delete_profile&id=<?php echo $user['id']; ?>"><i class="fa fa-times"></i></a>
                                     </td>
                                 </tr>
                                 <?php

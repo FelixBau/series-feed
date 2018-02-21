@@ -10,7 +10,7 @@
         } else {
             $registered = register($username, $mail_address, md5($password));
             if($registered) {
-                echo("<div class='alert alert-success' role='alert'>Account erfolgreich erstellt! Bitte prüfe dein Mail-Postfach.</div>");
+                echo("<div class='alert alert-success' role='alert'>Account erfolgreich erstellt!</div>");
             } else {
                 echo("<div class='alert alert-danger' role='alert'>Fehler beim registrieren, bitte versuche es erneut.</div>");
             }
