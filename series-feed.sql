@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 07. Feb 2018 um 09:18
+-- Erstellungszeit: 21. Feb 2018 um 10:29
 -- Server-Version: 5.7.21-0ubuntu0.16.04.1
 -- PHP-Version: 7.0.22-0ubuntu0.16.04.1
 
@@ -38,8 +38,7 @@ CREATE TABLE `groups` (
 
 INSERT INTO `groups` (`id`, `name`, `perm_level`) VALUES
 (1, 'Benutzer', 5),
-(2, 'Admin', 1),
-(4, 'Test', 10);
+(2, 'Admin', 1);
 
 -- --------------------------------------------------------
 
@@ -169,7 +168,7 @@ CREATE TABLE `series_data` (
 --
 
 INSERT INTO `series_data` (`id`, `name`, `producerid`, `seasons`, `episodes`, `genre`, `last_edit`, `clicks`) VALUES
-(1, 'The Walking Dead', 1, '7+', '108+', 'Drama / Horror', '2017-12-21 09:00:48', 12),
+(1, 'The Walking Dead', 1, '7+', '108+', 'Drama / Horror', '2018-02-21 09:24:44', 13),
 (2, 'Star Trek: Discovery', 11, '1', '9+', 'Science-Fiction', '2018-01-06 14:27:35', 1),
 (3, 'Narcos', 10, '3+', '30+', 'Drama / Krimi', '2018-01-06 14:27:39', 1),
 (4, 'Tote Mädchen lügen nicht', 10, '1+', '13+', 'Drama', '2018-01-06 14:27:42', 3),
@@ -241,7 +240,7 @@ INSERT INTO `series_data` (`id`, `name`, `producerid`, `seasons`, `episodes`, `g
 (70, 'From Dust till Dawn', 42, '3', '30', 'Horror / Drama', '2017-11-17 09:35:26', 0),
 (71, 'Colony', 15, '2', '23+', 'Science-Fiction / Drama', '2017-11-17 09:42:09', 0),
 (72, 'Büro der Legenden', 43, '3+', '30+', 'Drama / Krimi', '2017-11-17 09:42:09', 0),
-(73, 'Shooter', 9, '2', '18', 'Drama / Action', '2017-11-17 09:42:09', 0),
+(73, 'Shooter', 9, '2', '18', 'Drama / Action', '2018-02-19 16:31:07', 2),
 (74, 'Dice', 44, '1', '6', 'Sitcom', '2017-11-17 09:42:09', 0),
 (75, 'White famous', 45, '1', '4', 'Comedy', '2017-11-17 09:42:09', 0),
 (76, 'Madame Secretary', 11, '3+', '68', 'Drama', '2017-11-17 09:42:09', 0),
@@ -453,7 +452,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `account_status`, `group_id`, `last_login`) VALUES
 (2, 'felixk', '2a5fc0f1fd5a33bd6d1424043da53ed7', 'legoinsel2@gmail.com', 1, 2, '1511117543516'),
 (7, 'felixj', 'db3a03992de2012b644ca357f5de6384', 'fcjfb@junger-dettenhausen.de', 1, 2, '1511205647484'),
-(8, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.de', 1, 2, '1517912433277'),
+(8, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.de', 1, 2, '1519203864654'),
 (9, 'march', '4544de663aeeb00d41bb54fa775cb7c7', 'marc.hoermann@gmx.de', 1, 2, '1516955612019');
 
 --

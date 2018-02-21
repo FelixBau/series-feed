@@ -63,6 +63,7 @@
                         ?>
                     </tbody>
                 </table>
+                <a class="btn btn-info" href="#" data-toggle="modal" data-target="#addProducerModal"><i class="material-icons">camera_enhance</i>&nbsp;Produktionsfirma hinzuf&uuml;gen</a>
             </div>
             <div class="tab-pane active" id="series">
                 <!-- Serien-Tabelle -->
@@ -136,7 +137,68 @@
                         ?>
                     </tbody>
                 </table>
+                <a class="btn btn-info" href="#" data-toggle="modal" data-target="#addServiceModal"><i class="material-icons">view_compact</i>&nbsp;Streamingdienst hinzuf&uuml;gen</a>
             </div>
+        </div>
+    </div>
+</div>
+<!-- Add-Producer-Modal -->
+<div class="modal fade" id="addProducerModal" tabindex="-1" role="dialog" aria-labelledby="addProducerModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="?p=add_producer" method="POST">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="addGroupModal">Produktionsfirma hinzuf&uuml;gen</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating has-info">
+                                <label class="control-label">Name</label>
+                                <input name="name" type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-success" value="Hinzuf&uuml;gen">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Add-Service-Modal -->
+<div class="modal fade" id="addServiceModal" tabindex="-1" role="dialog" aria-labelledby="addServiceModal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="?p=add_service" method="POST">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="addGroupModal">Streamingdienst hinzuf&uuml;gen</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group label-floating has-info">
+                                <label class="control-label">Name</label>
+                                <input name="name" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group label-floating has-info">
+                                <label class="control-label">Link zur Webseite</label>
+                                <input name="website_link" type="text" class="form-control" />
+                            </div>
+                            <div class="form-group label-floating has-info">
+                                <label class="control-label">Preis-Text</label>
+                                <input name="price" type="text" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-success" value="Hinzuf&uuml;gen">
+                </div>
+            </form>
         </div>
     </div>
 </div>
