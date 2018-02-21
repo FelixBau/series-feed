@@ -11,7 +11,7 @@
                 $p = 'index';
             }
 
-            if(($p != 'index') && ($p != 'login') && ($p != 'register') && (!isset($_SESSION['user']))) {
+            if(($p != 'index') && ($p != 'login') && ($p != 'register') && ($p != 'series') && (!isset($_SESSION['user']))) {
                 header("Location: ?p=index");
             }
         ?>
