@@ -111,3 +111,15 @@
     </div>
 </div>
 <br><br>
+<?php
+    if($group['perm_level'] < 3) {
+        ?>
+        <div class="card">
+            <div class="content">
+                <a href="?p=edit_series&id=<?php echo $id; ?>" class="btn btn-warning"><i class="material-icons">edit</i>&nbsp;Serie bearbeiten</a>
+            </div>
+        </div>
+        <br><br>
+        <?php
+    }
+?>

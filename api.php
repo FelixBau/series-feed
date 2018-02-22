@@ -109,6 +109,11 @@
         get_mysql()->query("INSERT INTO series_data (name, producerid, seasons, episodes, genre) VALUES ('$name', '$producerid', '$seasons', '$episodes', '$genre')");
     }
 
+    // Methode um eine Veränderung an einer Serie in die Datenbank zu schreiben
+    function update_series($id, $name, $producerid, $seasons, $episodes, $genre) {
+        get_mysql()->query("UPDATE series_data SET name='$name', producerid='$producerid', seasons='$seasons', episodes='$episodes', genre='$genre' WHERE id='$id'");
+    }
+
     /*  
         Produktionsfirmen
     */
