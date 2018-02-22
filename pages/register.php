@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-group label-floating has-info">
                     <label class="control-label">E-Mail Adresse</label>
-                    <input name="mail_address" type="text" class="form-control" />
+                    <input name="mail_address" type="email" class="form-control" />
                 </div>
                 <div class="form-group label-floating has-info">
                     <label class="control-label">Passwort</label>
