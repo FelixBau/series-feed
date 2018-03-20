@@ -1,7 +1,7 @@
 <?php
     // Methode um MySQL Verbindung herzustellen
     function get_mysql() {
-        $mysqli = new mysqli('minewave.de', 'series-feed', 'FeFeMa15', 'series-feed');
+        $mysqli = new mysqli('localhost', '', '', 'series-feed');
         $mysqli->set_charset("utf8");
         return $mysqli;
     }
