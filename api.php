@@ -1,7 +1,7 @@
 <?php
     // Methode um MySQL Verbindung herzustellen
     function get_mysql() {
-        $mysqli = new mysqli('localhost', 'root', '', 'series-feed');
+        $mysqli = new mysqli('minewave.de', 'series-feed', 'FeFeMa15', 'series-feed');
         $mysqli->set_charset("utf8");
         return $mysqli;
     }
@@ -186,11 +186,12 @@
         $result = 0;
         $user = get_user('username', $username);
         if($user == null) return false;
-        if($user['password'] == $password){
+        if($user['pw'] == $password){
             $result = 1; // Login erfolgreich
         } else {
             $result = 0; // Passwort falsch
         }
+        return $result;
 
         if($user['account_status'] == 1) {
             set_last_login('id', $user['id']);
