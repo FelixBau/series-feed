@@ -206,7 +206,7 @@
 
     // Register-Funktion zum registrieren eines neuen Benutzers
     function register($username, $mail_address, $password) {
-        return get_mysql()->query("INSERT INTO users (username, pw, email, account_status, group_id) VALUES ('$username', '$password', '$mail_address', '1', '1')") != null;
+        return get_mysql()->query("INSERT INTO users (username, pw, email, account_status, group_id, last_login) VALUES ('$username', '$password', '$mail_address', '1', '1', '0')") != null;
     }
 
     // Formatierung eines gegebenen Account-Status
