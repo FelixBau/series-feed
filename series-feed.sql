@@ -438,7 +438,7 @@ INSERT INTO `streaming_services` (`id`, `name`, `website_link`, `price_string`) 
 CREATE TABLE `users` (
   `id` int(8) NOT NULL,
   `username` varchar(16) NOT NULL,
-  `password` varchar(64) NOT NULL,
+  `pw` varchar(64) NOT NULL,
   `email` varchar(32) NOT NULL,
   `account_status` int(8) NOT NULL,
   `group_id` int(8) NOT NULL,
@@ -449,11 +449,8 @@ CREATE TABLE `users` (
 -- Daten für Tabelle `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`, `email`, `account_status`, `group_id`, `last_login`) VALUES
-(2, 'felixk', '2a5fc0f1fd5a33bd6d1424043da53ed7', 'legoinsel2@gmail.com', 1, 2, '1511117543516'),
-(7, 'felixj', 'db3a03992de2012b644ca357f5de6384', 'fcjfb@junger-dettenhausen.de', 1, 2, '1511205647484'),
-(8, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.de', 1, 2, '1519203864654'),
-(9, 'march', '4544de663aeeb00d41bb54fa775cb7c7', 'marc.hoermann@gmx.de', 1, 2, '1516955612019');
+INSERT INTO `users` (`id`, `username`, `pw`, `email`, `account_status`, `group_id`, `last_login`) VALUES
+(8, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@admin.de', 1, 2, '1519203864654');
 
 --
 -- Indizes der exportierten Tabellen
